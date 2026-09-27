@@ -7,7 +7,9 @@ from diffusers import StableDiffusionInpaintPipeline
 device = "cuda"
 diffusion_pipe = StableDiffusionInpaintPipeline.from_pretrained(
     "stable-diffusion-v1-5/stable-diffusion-inpainting",
-     torch_dtype=torch.float16).to(device)
+     torch_dtype=torch.float16,
+     allow_pickle=False
+     ).to(device)
 
 # turn off progress bars when processing input image
 # diffusion_pipe.set_progress_bar_config(leave=False)
