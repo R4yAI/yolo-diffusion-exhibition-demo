@@ -6,7 +6,7 @@ from diffusers import StableDiffusionInpaintPipeline
 # define diffusion pipeline - first call will download model
 device = "cuda"
 diffusion_pipe = StableDiffusionInpaintPipeline.from_pretrained(
-    "stabilityai/stable-diffusion-2-inpainting",
+    "stable-diffusion-v1-5/stable-diffusion-inpainting",
      torch_dtype=torch.float16).to(device)
 
 # turn off progress bars when processing input image
